@@ -1,0 +1,231 @@
+<html>
+<head>
+<title>firebase editable table </title>
+
+</head>
+
+<body>
+
+<div>
+  <form>
+    <input type="text" class="form-control" id="date" placeholder="Date">
+    <input type="text" class="form-control" id="ville"placeholder="Ville">
+    <input type="email" class="form-control" id="salle" placeholder="Salle de concert">
+  <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+
+  <button type="submit" id="getData" class="btn btn-primary">Search data</button>
+
+<section id="dataTbl">
+  <article>
+    <h2>31 MARS 2023</h2>
+    <div>
+        <p><b>Paris</b><br>ZENITH DE LA VILETTE</p>
+        <span class="full"><b>COMPLET</b></span>
+    </div>
+</article>
+<article>
+    <h2>10 AVRIL 2023</h2>
+    <div>
+        <p><b>Rennes</b><br>FESTIVAL MYTHOS</p>
+        <span class="nofull"><b>BILLETERIE</b></span>
+    </div>
+</article>
+<article>
+    <h2>10 JUIN 2023</h2>
+    <div>
+        <p><b>Montréal</b><br>FRANCOS MONTREAL</p>
+        <span class="nofull"><b>BILLETERIE</b></span>
+    </div>
+</section>
+
+
+</body>
+</html>
+
+<style>
+    * {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #242424;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato/Lato-Black.woff2') format('woff2'),
+        url('../fonts/lato/Lato-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato/Lato-Bold.woff2') format('woff2'),
+        url('../fonts/lato/Lato-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato/Lato-Italic.woff2') format('woff2'),
+        url('../fonts/lato/Lato-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato/Lato-Light.woff2') format('woff2'),
+        url('../fonts/lato/Lato-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato/Lato-Regular.woff2') format('woff2'),
+        url('../fonts/lato/Lato-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+p,h1,h2,h3,h4 {
+    font-family: lato;
+}
+
+#dataTbl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 8rem;
+}
+
+#dataTbl article {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+h2 {
+    border: solid 2px white;
+    border-radius: 20px;
+    width: 120px;
+    height: 100px;
+    padding: 3rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+#dataTbl div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 20px;
+    width: 400px;
+    height: 100px;
+    padding: 3rem;
+}
+
+#dataTbl p {
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
+
+span {
+    border: solid 2px #30FF6A;
+    border-radius: 20px;
+    padding: 1.5rem;
+    font-family: lato;
+    font-weight: bold;
+    color: #30FF6A;
+}
+
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+  import { getDatabase, set, ref ,push, child, onValue} from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDsOapT_pWCMKGSI6HFanesJv3NbwRwfoE",
+    authDomain: "lab-201-ca7e0.firebaseapp.com",
+    databaseURL: "https://lab-201-ca7e0-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "lab-201-ca7e0",
+    storageBucket: "lab-201-ca7e0.appspot.com",
+    messagingSenderId: "1074072743151",
+    appId: "1:1074072743151:web:a7fe71c57b462b1ea5bf1a",
+    measurementId: "G-KLTTM46B4C"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  
+  // Get a reference to the database service
+  const database = getDatabase(app);
+
+  const nofull = document.querySelector('.nofull');
+
+  // write data
+  submit.addEventListener('click',(e) => {
+    const date = document.getElementById('date').value;  
+    const ville = document.getElementById('ville').value;  
+    const salle = document.getElementById('salle').value;  
+
+    const userId = push(child(ref(database), 'users')).key;
+   
+    set(ref(database, 'concerts/' + userId), {
+    date: date,
+    ville: ville,
+    salle : salle,
+   });
+   alert('saved');
+   window.location.reload();
+  });
+
+  // read data
+  window.addEventListener('load',(e) => {
+
+    $('#dataTbl td').remove();
+    const dbRef = ref(database, 'concerts/');
+
+    onValue(dbRef, (snapshot) => {
+      snapshot.forEach((childSnapshot) => {
+      const childKey = childSnapshot.key;
+      const childData = childSnapshot.val();
+      // ...
+      var row =  "<article><h2>" + childData.date + "</h2><div><p><b>" + childData.ville + "</b></p><p>" + childData.salle + "</p>" + "<span><b>BILLETERIE</b></span>" + "</div></article>";
+      
+
+      $(row).appendTo('#dataTbl');
+      
+      });
+    }, {
+       onlyOnce: true
+    });
+
+
+  });
+</script>

@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ebrima;
+    color: white;
+}
+
+header {
+    width: 100%;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: end;
+}
+
+nav {
+    grid-column-start: 2;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+nav a, li {
+    text-decoration: none;
+    list-style-type: none;
+    font-family: arial;
+    color: black;
+    padding: 10px;
+    border-radius: 5%;
+}
+
+nav a {
+    padding: 30px;
+}
+
+nav a:hover {
+    background-color: #E85156;
+}
+
+main {
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-right: 50px;
+    border: solid 1px black;
+
+}
+
+h1 {
+    margin-top: 50px;
+    font-size: 50px;
+}
+
+#slider {
+    background-color: black;
+    color: white;
+    font-family: Ebrima;
+}
+
+.welcome {
+    background-image: url(img/bg-content.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 80px;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 80px;
+    gap: 10px;
+    background-color: black;
+}
+
+.child1 p {
+    padding-right: 30px;
+    color: white;
+    font-family: ebrima;
+}
+
+.myphotos {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 80px;
+    gap: 30px;
+    background-image: url(img/bg-content.jpg);
+}
+
+.categories button {
+    border: none;
+    padding: 5px;
+    background-color: #E85156;
+    color: white;
+}
+
+.shortly {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: none;
+}
+
+.shortly img {
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+.shortly p, ul {
+    grid-column-start: 2;
+    padding-left: 0;
+}
+
+.photos {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 10px;
+}
+
+.link {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+li {
+    color: #E85156;
+}
+
+.link p {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.lien1 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+.lien2 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 50px;
+}
+
+/* je n'ai pas troivé d'autre manière d'aligner mes svg qu'avec du flex */
+.reseaux {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.mysvg {
+    margin: 10px;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+}
+
+.mysvg img:hover {
+    margin-top: -30px;
+    transition: 0.3s;
+}
+
+footer p {
+    color: black;
+}
+
+footer a {
+    color: #E85156;
+    text-decoration: none;
+}

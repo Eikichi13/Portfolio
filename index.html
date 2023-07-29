@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>O.T Portfolio</title>
+</head>
+<body>
+  <div class="popup">
+    <div class="popup_contain">
+      <h1>Une petite minute !</h1>
+      <p>En entrant sur cette page, vous acceptez de découvrir les projets d'un étudiant en développement web, qui est tombé sous le charme de ce monde il y a seulement deux ans. Ce sont de simples projets scolaire, loin des sites que peut proposer un développeur full stack senior. Certains sont incomplets et d'autres manque d'esthétismes, mais ce sont des projets réalisé avec un grand sérieux et beaucoup de passion. Si vous êtes d'accord avec ces quelques lignes, vous pouvez continuer :)</p>
+      <p id="continue">Je suis Ok</p>
+    </div>
+  </div>
+    <header>
+      <section class="h_classic">
+        <div class="title"><img src="img/fleche.gif" alt="fleche" id="fleche"></div>
+        <section class="contact">
+          <a href="img/Omar.T Alterance.pdf" download=""><img src="img/download-1-svgrepo-com.svg" alt="télécharger mon cv" title="Télécharger mon cv"></a>
+          <div class="mail">
+            <img onclick="myFunction()" src="img/mail-svgrepo-com.svg" alt="" id="mail" title="Cliquer pour copier mon mail !">
+            <input type="text" value="omartassoubi13@gmail.com" readonly id="myInput">
+          </div>
+          <a href="https://www.linkedin.com/in/omartassoubi/" title="Visiter mon linkedin" target="_blank"><img src="img/linkedin-svgrepo-com.svg" alt=""></a>
+        </section>
+      </section>
+    </header>
+
+    <section class="h_mobile">
+      <div class="btn_mobile" onclick="mobile()"></div>
+      <section class="contact_mobile">
+        <section class="box">
+          <a href="img/Omar.T Alterance.pdf" download=""><img src="img/download-1-svgrepo-com.svg" alt="télécharger mon cv" title="Télécharger mon cv"></a>
+          <div class="mail">
+            <img onclick="copypast()" src="img/mail-svgrepo-com.svg" alt="" id="mail" title="Cliquer pour copier mon mail !">
+            <input type="text" value="omartassoubi13@gmail.com" readonly id="myInput">
+          </div>
+          <a href="https://www.linkedin.com/in/omartassoubi/" title="Visiter mon linkedin" target="_blank"><img src="img/linkedin-svgrepo-com.svg" alt=""></a>
+        </section>
+      </section>
+    </section>
+
+    <main>
+      <div class="slidershow">
+
+        <div class="slides">
+          <input type="radio" name="r" id="r1" checked>
+          <input type="radio" name="r" id="r2">
+          <input type="radio" name="r" id="r3">
+          <input type="radio" name="r" id="r4">
+          <input type="radio" name="r" id="r5">
+          <div class="slide s1">
+            <section class="descr">
+              <h2>PROJET ART SPACE</h2>
+              <p>Lors de ce projet, nous devions reproduire deux pages : <b>Price</b> et <b>Tour</b> à partir d'une maquette envoyée par notre intervenant.</p>
+              <a href="projets/ArtSpace/tour.html" target="_blank">Voir le projet</a>
+            </section>
+          </div>
+          <div class="slide s2">
+            <section class="descr">
+              <h2>PROJET DISPLAY GRID</h2>
+              <p>Afin de nous familiariser avec le <b>display grid</b>, nous devions reproduire une maquette à l'identique en utilisant uniquement du <b>grid</b> et en ajoutant un effet d'apparition au scroll à une des <b>div</b>.</p>
+              <a href="projets/grid/grid.html" target="_blank">Voir le projet</a>
+            </section>
+          </div>
+          <div class="slide s3">
+            <section class="descr">
+              <h2>PROJET LAB201</h2>
+              <p>Ceci est le projet qui a conclu notre année. Dans un groupe composé d'élèves des filières créatives et de la communications, nous devions recréer la direction artistique d'un artiste musicale. Nous devions relier notre site à une base de données <b>Firebase</b> pour gérer la tournée de l'artiste (plus active aujourd'hui).</p>
+              <a href="projets/Lab201/index.html" target="_blank">Voir le projet</a>
+            </section>
+          </div>
+          <div class="slide s4">
+            <section class="descr">
+              <h2>PROJET SHOPCITY</h2>
+              <p>Ce site une reproduction d'une application fictive, coder avec <b>Bootstrap</b>. Pour pouvoir consulter ce projet il faudra suivre la procédure suivante : clique droit sur la page > inspecter > logo <b>"responsive"</b> > iphone 12 ou autre mobile. <br>Ou tout simplement réduire la page jusqu'à obtenir une taille d'écran de téléphone.</p>
+              <a href="projets/Shopcity/inscription1.html" target="_blank">Voir le projet</a>
+            </section>
+          </div>
+          <div class="slide s5">
+            <section class="descr">
+              <h2>PROJET M.L.C</h2>
+              <p>Simple reproduction d'une maquette d'un site vitrine. La particularité de cet exercice était qu'il fallait gérer le format impression.</p>
+              <a href="projets/M.L.C/interface.html" target="_blank">Voir le projet</a>
+            </section>
+          </div>
+        </div>
+  
+        <div class="navigation">
+          <label for="r1" class="bar"></label>
+          <label for="r2" class="bar"></label>
+          <label for="r3" class="bar"></label>
+          <label for="r4" class="bar"></label>
+          <label for="r5" class="bar"></label>
+        </div>
+      </div>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,308 @@
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #242424;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato/Lato-Black.woff2') format('woff2'),
+        url('../fonts/lato/Lato-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato/Lato-Bold.woff2') format('woff2'),
+        url('../fonts/lato/Lato-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato/Lato-Italic.woff2') format('woff2'),
+        url('../fonts/lato/Lato-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato/Lato-Light.woff2') format('woff2'),
+        url('../fonts/lato/Lato-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato/Lato-Regular.woff2') format('woff2'),
+        url('../fonts/lato/Lato-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+p,h1,h2,h3,h4 {
+    font-family: lato;
+}
+
+.top {
+    display: none;
+    width: 70px;
+    height: 70px;
+    border-radius: 40px;
+    background-color: white;
+    border: solid 2px black;
+    font-family: lato;
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.top img {
+    width: 30px;
+    height: 30px;
+}
+
+.top:hover {
+    background-color: #FD6767;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+#logo-header {
+    width: 20%;
+}
+
+.nav {
+    margin-top: -5rem;
+}
+
+.nav img {
+    background-color: #C9C9C9;
+    border-radius: 50%;
+    padding: 0.5rem;
+    width: 25px;
+    height: 25px;
+    margin: 0.5rem;
+}
+
+.back {
+    background-color: white;
+    border: solid 1px black;
+    border-radius: 20px;
+    width: 50px;
+    height: 50px;
+    margin-top: 8rem;
+    margin-left: 8rem;
+    cursor: pointer;
+}
+
+.back img {
+    width: 100%;
+}
+
+.concert {
+    margin: 8rem;
+}
+
+.concert p {
+    color: white;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+}
+
+h1 img {
+    width: 35px;
+    height: 35px;
+    margin-left: 1rem;
+}
+
+.underline {
+    width: 3%;
+    border-top: solid 4px #FD6767;
+    margin-left: -1px;
+    margin-top: -15px;
+}
+
+.tourné {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tourné article {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+h2 {
+    border: solid 2px white;
+    border-radius: 20px;
+    width: 120px;
+    height: 100px;
+    padding: 3rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.tourné div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 20px;
+    width: 400px;
+    height: 100px;
+    padding: 3rem;
+}
+
+.tourné p {
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
+
+.full {
+    border: solid 2px #FD7676;
+    border-radius: 20px;
+    padding: 1.5rem;
+    font-family: lato;
+    font-weight: bold;
+    color: #FD7676;
+}
+
+.nofull {
+    border: solid 2px #30FF6A;
+    border-radius: 20px;
+    padding: 1.5rem;
+    font-family: lato;
+    font-weight: bold;
+    color: #30FF6A;
+}
+
+.titre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titre2 {
+    background-color: #242424;
+    z-index: 99;
+    padding: 30px;
+}
+
+h3 {
+    font-weight: bold;
+    color: white;
+    font-size: 35px;
+}
+
+.titre hr {
+    width: 100%;
+    margin-top: -4.5rem;
+    border: 2px solid white;
+}
+
+.more_box {
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+.more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 70px;
+    background-color: #FD6767;
+    border-radius: 20px;
+    position: relative;
+}
+
+.more img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 5%;
+    bottom: 20%;
+}
+
+.more p {
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-start;
+    border-top: solid 3px white;
+    border-bottom: solid 3px white;
+    height: 500px;
+    padding-top: 3rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    margin-top: 10rem;
+}
+
+footer hr {
+    height: 30%;
+    margin-top: 5rem;
+    border-left: solid 2px white;
+}
+
+footer section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer img {
+    width: 50px;
+    height: 50px;
+    margin: 1rem;
+}
+
+h4 {
+    color: white;
+    font-size: 20px;
+}
+
+footer p {
+    color: white;
+}

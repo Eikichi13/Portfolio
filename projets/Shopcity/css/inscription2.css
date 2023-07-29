@@ -1,0 +1,80 @@
+@media screen and (max-width: 376px) {
+    body {
+        background-color: #35C0F2;
+        margin: 0;
+        padding: 0;
+    }
+
+    main {
+        margin-top: 80px;
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-bottom: 80px;
+        height: 800px;
+        border: 3px solid black;
+        border-radius: 20px;
+        background-color: white;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+
+    .commer {
+        border: solid 3px black;
+        margin-top: -5px;
+    }
+
+    .logo img {
+        width: 120px;
+        height: 40px;
+    }
+
+    #email, #password {
+        width: 90%;
+        border-radius: 20px;
+        margin-top: 20px;
+        border: solid black 1px;
+        padding-left: 20px;
+    }
+
+    #btn {
+        border-radius: 10px;
+        padding: 5px;
+        border: none;
+        background-color: #7135F2;
+        color: white;
+        text-align: center;
+        width: 60%;
+        margin-top: 20px;
+    }
+
+    form a {
+        margin-top: 10px;
+        font-style: italic;
+        color: #7135F2;
+    }
+
+    .reseaux button {
+        border-radius: 20px;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 14px;
+        border: solid 1px black;
+        background-color: white;
+        margin-top: 10px;
+    }
+
+    .reseaux img {
+        width: 20px;
+        height: 20px;
+    }
+
+
+
+}

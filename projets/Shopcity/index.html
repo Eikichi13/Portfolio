@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous" defer></script>
+    <link rel="stylesheet" href="css/index.css">
+    <title>Shopcity</title>
+</head>
+<body>
+
+    <header class="">
+        <section class="col-sm-12 d-flex justify-content-center align-items-start parentmenu">
+            <input type="checkbox" class="toggler">
+            <div class="hamburger"><div></div></div>
+            <nav class="menu">
+                <div>
+                    <ul>
+                        <li><a href='index.html'>Home</a></li>
+                        <li><a href='#'>About</a></li>
+                        <li><a href='#'>Services</a></li>
+                        <li><a href='#'>Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <img src="img/logo.png" alt="" class="logo col-sm-4">
+            <img src="img/panier.png" alt="" class="col-sm-4 panier">
+        </section>
+        <h1>Ville de Rueil-Malmaison</h1>
+        <p class="sous-titres">Découvrez tous nos commerçants, artisans et producteurs</p>
+        <section class="mapbar-parent d-flex justify-content-center p-3">
+            <section class="mapbar align-content-center">
+                <input type="text" placeholder="Entrez votre localisation. Où voulez-vous vous faire livrer ? ">
+                <img src="img/geo-alt-fill.svg" alt="">
+            </section>
+        </section>
+    </header>
+
+    <section class="searchbar-parent d-flex justify-content-center p-3">
+        <section class="searchbar align-content-center">
+            <input type="text" placeholder="Entrez votre recherche. Produit ? Commerce ? Recette ? ">
+            <img src="img/search.svg" alt="">
+        </section>
+    </section>
+
+    <h2>Inscrits dernièrement</h2>
+    <section class="inscrits row-12">
+        <div class="card m-3 col-6 card-inscrits">
+            <img src="img/page-1-photo-1.png" class="card-img-top cardimg" alt="...">
+            <div class="card-body card-body-inscrits">
+                <h3 style="font-size: 15px;">Poissonnerie Mcfish <a href="page2.html"><b>CLIQUEZ ICI</b></a></h3>
+                <p class="card-text">10 rue madelaine <br> 92500, Rueil-Malmaison <br> 01.32.89.76.90</p>
+            </div>
+        </div>
+        <div class="card m-3 col-6 card-inscrits">
+            <img src="img/page1-photo-2.png" class="card-img-top cardimg" alt="...">
+            <div class="card-body card-body-inscrits">
+              <h3 style="font-size: 15px;">Boucherie du Château </h3>
+              <p class="card-text">80 avenue du 18 Juin 1940 <br> 92500, Rueil-Malmaison <br> 01.32.89.76.90</p>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <h2>Les spécialités</h2>
+    <section class="special row-12">
+        <section>
+            <h4>Poissonnerie</h4>
+            <article class="poisson col-4"><img src="img/icons8-nourriture-pour-poisson-100.png" alt=""></article>
+        </section>
+        <section>
+            <h4>Boucherie</h4>
+            <article class="steak col-4"><img src="img/icons8-steak-64.png" alt=""></article>
+        </section>
+        <section>
+            <h4>Boulangerie</h4>
+            <article class="croissant col-4"><img src="img/icons8-croissant-100.png" alt=""></article>
+        </section>
+    </section>
+
+    <hr>
+
+    <section class="envie">
+        <div id="carouselExampleInterval" class="carousel slide"  data-interval="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="0">
+                <div class="card card-envie" style="width: 15rem;">
+                    <div class="card-body card-body-envie">
+                        <p><b>Une envie particulière ?</b></p>
+                      <p class="card-text">Un brunch, un dîner romantique,<br> Des tapas, un hamburger  ?</p>
+                    </div>
+                    <img src="img/page1-photo-3.png" class="card-img-bottom" alt="...">
+                  </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="0">
+                <div class="card card-envie" style="width: 15rem;">
+                    <div class="card-body body card-body-envie">
+                        <p><b>Une envie particulière ?</b></p>
+                      <p class="card-text">Un brunch, un dîner romantique,<br> Des tapas, un hamburger  ?</p>
+                    </div>
+                    <img src="img/page1-photo-3.png" class="card-img-bottom" alt="...">
+                  </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev opacity-100" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon carousel-icon" aria-hidden="true"><img src="img/icons8-flèche-gauche-100.png" alt=""></span>
+            </button>
+            <button class="carousel-control-next opacity-100" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+              <span class="carousel-control-next-icon carousel-icon" aria-hidden="true"><img src="img/icons8-flèche-droite-100.png" alt=""></span>
+            </button>
+          </div>
+    </section>
+
+    <hr>
+
+    <h2 class="bleu">Paniers découvertes</h2>
+    <section class="decouvertes row-12">
+        <div class="card m-3 col-6 card-decouvertes">
+            <img src="img/page-1-photo-4.png" class="card-img-top" alt="...">
+            <div class="card-body card-body-decouvertes">
+                <p class="card-text">On passe au vert</p>
+            </div>
+        </div>
+        <div class="card m-3 col-6 card-decouvertes">
+            <img src="img/page-1-photo-5.png" class="card-img-top" alt="...">
+            <div class="card-body card-body-decouvertes">
+              <p class="card-text">De saison</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="decouvertes row-12">
+        <div class="card m-3 col-6 card-decouvertes">
+            <img src="img/page-1-photo-6.png" class="card-img-top" alt="...">
+            <div class="card-body card-body-decouvertes">
+                <p class="card-text">Grillade Marine</p>
+            </div>
+        </div>
+        <div class="card m-3 col-6 card-decouvertes">
+            <img src="img/page-1-photo-7.png" class="card-img-top" alt="...">
+            <div class="card-body card-body-decouvertes">
+              <p class="card-text">Fraîcheur</p>
+            </div>
+        </div>
+    </section>
+
+    <h2 class="bleu mt-5">Nos engagements</h2>
+    <section class="engagement mt-5">
+        <article>
+            <img src="img/icons8-salade-100 (1).png" alt="">
+            <p>Des produits frais </p>
+        </article>
+        <hr>
+        <article>
+            <img src="img/icons8-curseur-128.png" alt="">
+            <p>Click and collect dans toutes nos boutiques</p>
+        </article>
+        <hr>
+        <article>
+            <img src="img/icons8-vélo-100.png" alt="">
+            <p>Livraison en maximum 24H</p>
+        </article>
+    </section>
+
+    <footer>
+        <img src="img/logo.png" alt="">
+        <section class="left">
+            <p>Notre équipe</p>
+            <p>Nous contacter</p>
+            <p>Nous rejoindre ?</p>
+        </section>
+        <hr>
+        <section class="left">
+            <p>Conditions générales de vente</p>
+            <p>Conditions générales d'utilisation </p>
+            <p>F.A.Q</p>
+        </section>
+        <hr>
+         <form action="" method="get" class="center">
+             <p style="font-size: 20px;">Inscrivez-vous à la newsletter</p>
+              <p>Découvrez toutes nos nouveautés et bon plans</p>
+              <input type="email" placeholder="Entrez votre adresse email" class="email">
+              <label for="accepte">
+                  <input type="radio" name="accepte" id="accepte"> J'accepte que mes informations personnelles soient utilisées par Shopcity.
+              </label>
+                <button>S'inscrire</button>
+         </form>
+        <section class="d-flex flex-row justify-content-between mt-4 reseaux">
+            <p>Shopcity. © 2021</p>
+            <article>
+                <img src="img/icons8-facebook-nouveau-100 (1).png" alt="">
+                <img src="img/icons8-instagram-100.png" alt="">
+            </article>
+        </section>
+        <p class="mt-4 text-center"><i>Pour votre santé, mangez au moins cinq fruits et légumes par jour, plus d’infos sur www.mangerbouger.fr. L’abus d’alcool est dangereux pour la santé. À consommer avec modération </i></p>
+    </footer>
+    
+    
+</body>
+</html>
